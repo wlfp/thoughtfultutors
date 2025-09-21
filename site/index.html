@@ -4,13 +4,10 @@
     <title>Thoughtful Tutors</title>
     <style>
       body {
-      margin: 0;
-      padding: 0 1rem;
       max-width: 800px;
       margin-left: auto;
       margin-right: auto;
       line-height: 1.6;
-      font-size: 1rem;
       font-family: system-ui, sans-serif;
     }
     </style>
@@ -21,7 +18,7 @@
     <p>
       The domain was registered with
       <a href="https://www.cloudflare.com/en-gb/products/registrar/">Cloudflare</a>
-      (as they provide at-cost domain registration) who still provide the authoritative DNS.
+      (as they provide at-cost domain registration) who also provide the authoritative DNS.
       The mail service is provided by
       <a href="https://support.apple.com/en-gb/102540">iCloud's custom email domain service</a>
       as it's a good-value option (for those with an existing iCloud+ subscription) and even
@@ -31,10 +28,10 @@
       bucket with a
       <a href="https://aws.amazon.com/cloudfront/">Cloudfront</a>
       layer infront.
-Cloudfront is mostly useful here for so that HTTPS is supported, the edge caching is a bonus. 
-All of the AWS configuration lives in a
-      <a href="https://aws.amazon.com/cloudformation">Cloudformation</a>
-      YAML file so that I can easily change it once Thoughtful Tutors scales to a
+      Cloudfront is mostly useful here for so that HTTPS is supported, the edge caching is a bonus. 
+      As much of the infrastructure configuration as possible lives in an
+      <a href="https://opentofu.org/">OpenTofu</a>
+      file so that I can easily change it once Thoughtful Tutors scales to a
       <i>ga-trillion</i>
       users.
 However, you already know all of this (thanks to a few
