@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <title>Thoughtful Tutors</title>
+    <style>
+      body {
+      margin: 0;
+      padding: 0 1rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+      font-size: 1rem;
+      font-family: system-ui, sans-serif;
+    }
+    </style>
+  </head>
+  <body>
+    <H1>Thoughtful Tutors</H1>
+    <p>Currently, this site has no content, although that will change soon.</p>
+    <p>
+      The domain was registered with
+      <a href="https://www.cloudflare.com/en-gb/products/registrar/">Cloudflare</a>
+      (as they provide at-cost domain registration) who still provide the authoritative DNS.
+      The mail service is provided by
+      <a href="https://support.apple.com/en-gb/102540">iCloud's custom email domain service</a>
+      as it's a good-value option (for those with an existing iCloud+ subscription) and even
+      <a href="mailto:dev@thoughtfultutors.co.uk">actually works</a>!
+      This page (yes, the one you're looking at right now) is hosted in an
+      <a href="https://aws.amazon.com/s3/">S3</a>
+      bucket with a
+      <a href="https://aws.amazon.com/cloudfront/">Cloudfront</a>
+      layer infront.
+Cloudfront is mostly useful here for so that HTTPS is supported, the edge caching is a bonus. 
+All of the AWS configuration lives in a
+      <a href="https://aws.amazon.com/cloudformation">Cloudformation</a>
+      YAML file so that I can easily change it once Thoughtful Tutors scales to a
+      <i>ga-trillion</i>
+      users.
+However, you already know all of this (thanks to a few
+      <code>dig</code>
+      lookups and your powers of deduction), don't you?
+    </p>
+  </body>
+</html>
