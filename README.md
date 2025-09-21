@@ -20,13 +20,12 @@ Settings for this are largely managed through iCloud directly, but shouldn't nee
 
 ## Hosting
 
-The hosting is backed by Amazon S3 and sped up with Amazon Cloudfront.
-The specifics can be found in `thoughtfultutors.yml` Amazon Cloudformation file, this approach uses IaC principles for maintainability.
-
+The hosting is backed by Amazon S3 and sped up with Amazon Cloudfront, which also provides SSL.
+The `opentofu` directory contains the infrastructure in code form.
 
 ## Page Content
 
-The static parts of the site are available in (need to confirm).
+The static parts of the site are available in `site` directory.
 
 ## Deployment
 
