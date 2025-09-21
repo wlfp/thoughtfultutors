@@ -22,13 +22,16 @@
       bucket with a
       <a href="https://aws.amazon.com/cloudfront/">Cloudfront</a>
       layer infront.
-      Cloudfront is mostly useful here for so that HTTPS is supported, the edge caching is a bonus. 
-      As much of the infrastructure configuration as possible lives in an
+      Cloudfront is mostly useful here for so that HTTPS is supported, the edge caching and gzip'ing are bonuses. 
+      As much of the infrastructure provisioning as possible lives in an
       <a href="https://opentofu.org/">OpenTofu</a>
       file so that I can easily change it once Thoughtful Tutors scales to a
       <i>ga-trillion</i>
       users.
-However, you already know all of this (thanks to a few
+      There is a CD pipeline in place that minifies the site content using
+      <a href="https://github.com/tdewolff/minify/tree/master">minify</a>,
+      then pushes the optimised files to the S3 bucket before invalidating the Cloudfront cache.
+      However, you already know all of this (thanks to a few
       <code>dig</code>
       lookups and your powers of deduction), don't you?
     </p>
