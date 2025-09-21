@@ -2,7 +2,7 @@
 
 ## Description
 
-This document describes the design of [Thoughtful Tutors](www.thoughtfultutors.co.uk), the site and email hosting service.
+This document describes the design of [Thoughtful Tutors](https://thoughtfultutors.co.uk), the site and email service.
 
 ## Domain
 
