@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thoughtful Tutors</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <H1>Thoughtful Tutors Developer Information</H1>
+    <p>
+      The domain was registered with
+      <a href="https://www.cloudflare.com/en-gb/products/registrar/">Cloudflare</a>
+      (as they provide at-cost domain registration) who also provide the authoritative DNS.
+      The mail service is provided by
+      <a href="https://support.apple.com/en-gb/102540">iCloud's custom email domain service</a>
+      as it's a good-value option (for those with an existing iCloud+ subscription) and even
+      <a href="mailto:dev@thoughtfultutors.co.uk">actually works</a>!
+      This page (yes, the one you're looking at right now) is hosted in an
+      <a href="https://aws.amazon.com/s3/">S3</a>
+      bucket with a
+      <a href="https://aws.amazon.com/cloudfront/">Cloudfront</a>
+      layer infront.
+      Cloudfront is mostly useful here for so that HTTPS is supported, the edge caching and gzip'ing are bonuses. 
+      As much of the infrastructure provisioning as possible lives in an
+      <a href="https://opentofu.org/">OpenTofu</a>
+      file so that I can easily change it once Thoughtful Tutors scales to a
+      <i>ga-trillion</i>
+      users.
+      There is a CD pipeline in place that minifies the site content using
+      <a href="https://github.com/tdewolff/minify/tree/master">minify</a>,
+      then pushes the optimised files to the S3 bucket before invalidating the Cloudfront cache.
+      However, you already know all of this (thanks to a few
+      <code>dig</code>
+      lookups and your powers of deduction), don't you?
+    </p>
+  </body>
+</html>
