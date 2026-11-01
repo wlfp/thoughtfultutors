@@ -1,0 +1,15 @@
+{
+  "name": "thoughtfultutors",
+  "compatibility_date": "2025-10-01",
+  "assets": {
+    "directory": "./site",
+    "not_found_handling": "404-page"
+  },
+  "routes": [
+    { "pattern": "thoughtfultutors.co.uk", "custom_domain": true },
+    { "pattern": "www.thoughtfultutors.co.uk", "custom_domain": true }
+  ],
+  // The site is served only on its own domain, not on workers.dev.
+  "workers_dev": false,
+  "preview_urls": false
+}

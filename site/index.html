@@ -1,88 +1,203 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thoughtful Tutors</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Adaptive, responsive tutoring for students aged 11–18 from DBS-checked qualified teachers who are also GCSE and A Level examiners.">
+    <meta name="color-scheme" content="light dark">
+    <link rel="canonical" href="https://thoughtfultutors.co.uk/">
+    <link rel="icon" href="data:,">
+    <style>
+      /* Typography follows Butterick's Practical Typography: body text first,
+         15–25px type, 120–145% line spacing, 45–90 characters per line,
+         subtle headings, colour only on links. */
+      :root {
+        --paper: #fdfcfa;
+        --ink: #2e2a27;
+        --quiet: #5f5853;
+        --link: #0b6a3a;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --paper: #1c1b1a;
+          --ink: #e6e1dc;
+          --quiet: #a8a09a;
+          --link: #7fd3a0;
+        }
+      }
+
+      *, *::before, *::after { box-sizing: border-box; }
+
+      html {
+        /* Type and measure scale together, so line length holds at every width. */
+        font-size: clamp(18px, 15px + 0.45vw, 21px);
+        -webkit-text-size-adjust: 100%;
+      }
+
+      body {
+        margin: 0;
+        padding: 3rem max(1.25rem, 5vw) 4rem;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+        line-height: 1.4;
+        font-kerning: normal;
+        text-rendering: optimizeLegibility;
+      }
+
+      .page {
+        max-width: 32em;
+        margin-inline: auto;
+      }
+
+      h1, h2, h3 {
+        font-weight: bold;
+        line-height: 1.2;
+        hyphens: manual;
+        text-wrap: balance;
+      }
+
+      h1 { font-size: 1.6em; margin: 0 0 0.8em; }
+      h2 { font-size: 1.1em; margin: 2.4em 0 0.5em; }
+      h3 { font-size: 1em; margin: 1.4em 0 0.3em; }
+
+      p, ul { margin: 0; }
+      p + p, p + ul, ul + p { margin-top: 0.6em; }
+
+      ul { padding-left: 1.1em; }
+      li + li { margin-top: 0.25em; }
+
+      a {
+        color: var(--link);
+        text-decoration-thickness: 0.06em;
+        text-underline-offset: 0.18em;
+      }
+      a:hover { text-decoration-thickness: 0.12em; }
+      a:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+
+      /* The brand's own list, read as the sentence it begins. */
+      .are ul { list-style: none; }
+      .are li { display: inline; }
+      .are li::after { content: ", "; }
+      .are li:nth-last-child(2)::after { content: " and "; }
+      .are li:last-child::after { content: "."; }
+
+      footer {
+        margin-top: 3em;
+        color: var(--quiet);
+        font-size: 0.85em;
+      }
+
+      /* Wide screens: headings move into the left margin as side heads,
+         and the text column keeps its measure. */
+      @media (min-width: 62em) {
+        .page { max-width: 44rem; }
+        header, section, footer {
+          display: grid;
+          grid-template-columns: 10rem 32rem;
+          column-gap: 2rem;
+        }
+        header > *, section > *, footer > * { grid-column: 2; }
+        section > h2 {
+          grid-column: 1;
+          grid-row: 1 / span 20;
+          font-size: 1em;
+          margin: 0;
+          padding-top: 0.05em;
+        }
+        section { margin-top: 2.4em; }
+        section > h2 + * { margin-top: 0; }
+        /* Bullets hang in the margin, so text keeps one left edge. */
+        ul { padding-left: 0; }
+      }
+    </style>
   </head>
   <body>
-    <header>
-      <h1>Welcome to Thoughtful Tutors</h1>
-    </header>
-    <main>
-      <p>We are a group of experienced and highly-qualified academic tutors who offer carefully-tailored, empathetic tutoring that nurtures students’ confidence and brings academic success.
-		Please
-        <a href="mailto:info@thoughtfultutors.co.uk">email us</a>
-        with any enquiries you may have.</p>
-      <section>
-        <h2>What makes our tutoring so effective?</h2>
-        <p>At Thoughtful Tutors, we understand that there is no one-size-fits-all approach to academic tutoring. The strength of our expertise lies in our
-          <b>adaptive</b>
-          and
-          <b>responsive</b>
-          tutoring methods that enable us to fulfil the educational needs of the person we are working with.</p>
-      </section>
-      <section>
-        <h2>What does adaptive tutoring mean?</h2>
-        <p>When a tutor has the expertise to recognise a student’s starting points in different skill areas, they can adapt their choice of resources, fine-tune the shape of each session and establish high expectations for the individual student. Thoughtful Tutors do not make assumptions about a student’s ‘ability’, instead, we adapt our sessions to the student’s starting points and guide them to be able to value their competencies, develop their skills and feel the rewards of their effort.</p>
-      </section>
-      <section>
-        <h2>What does responsive tutoring mean?</h2>
-        <p>Thoughtful Tutors understand that learning is a dynamic process in which our students’ development happens in different ways at different times. Responsive tutoring means modifying our approach in real-time to meet the needs of the student in front of us and maximise their progression. This means that our approach is empathetic, that we are alert to spotting signals from our students and able to respond to their needs by drawing on our extensive reservoir of explanations, strategies and activities.</p>
-      </section>
-      <section>
-        <h2>What does it take to be a Thoughtful Tutor?</h2>
-        <p>Being able to adapt and respond to individuals’ progress dynamically is not a skill that develops overnight! All Thoughtful Tutors are DBS-checked qualified teachers with considerable experience of classroom teaching in a range of school settings. Only with this educational experience under our belts are we able to offer truly effective tutoring. Through our professional practice, we have honed our abilities to genuinely see the individual in front of us and gauge what makes them tick so that we can help them to unlock their potential, target their efforts effectively and achieve their academic goals.</p>
-        <p>In addition, all of us have current or recent experience as GCSE or A Level examiners in our subjects, which gives us the precise know-how and expertise to deliver exam success across a range of exam boards and specification options.</p>
-        <p>As Thoughtful Tutors, we meet students where they are and guide them to take the next steps in their learning journey so that they can embark on their path to success.</p>
-      </section>
-      <section>
-        <h2>Bringing individuals back to great learning experiences</h2>
-        <p>Creativity and the love of learning lies at the heart of Thoughtful Tutors. We celebrate our students’ small gains as well as their breakthrough moments and nurture a growth mindset at all times.</p>
-        <p>We have a wide range of positive SEND strategies in our teaching toolkits to ensure that all students can grow academically in a supported environment. We are skilled in using assistive technology to aid students’ progress.</p>
-        <p>All Thoughtful Tutors are trauma-informed educators, who ensure we provide a context of safety and trust for all individuals to enable them to unlock their academic potential and thrive.</p>
-      </section>
-      <section>
-        <h2>What we can do for you</h2>
-        <p>Thoughtful Tutors offers a wealth of high-quality adaptive and responsive tutoring for students aged 11–18.</p>
-        <h3>Ages 11–13:</h3>
-        <ul>
-          <li>Support with school work or homework</li>
-          <li>Subject-specific skills development</li>
-          <li>For students who may have been out of school for a time we can provide a carefully planned course of study to enable them to progress</li>
-        </ul>
-        <h3>GCSEs:</h3>
-        <ul>
-          <li>Subject-specific skills development</li>
-          <li>Exam technique and help with revision</li>
-          <li>Help with specific topics and assessments</li>
-        </ul>
-        <h3>A Level:</h3>
-        <ul>
-          <li>Help with essay-writing skills and with planning and organising extended pieces of work</li>
-          <li>Exam technique and revision strategies</li>
-          <li>Help with specific topics and subject skills</li>
-          <li>University preparation and UCAS advice</li>
-        </ul>
-      </section>
-      <section>
-        <h2>Our areas of academic expertise</h2>
-        <p>We currently have highly-qualified tutors in English, Maths, Science and the Humanities, available for daytime, after-school or school holiday sessions. Whether we are tutoring individuals in person or online, our adaptive and responsive approach remains constant.</p>
-      </section>
-      <section>
-        <h2>Thoughtful Tutors are …</h2>
-        <ul>
-          <li>Creative</li>
-          <li>Adaptive</li>
-          <li>Responsive</li>
-          <li>Patient</li>
-          <li>Understanding</li>
-          <li>Empathetic</li>
-          <li>Experienced</li>
-          <li>Positive</li>
-        </ul>
-      </section>
-    </main>
+    <div class="page">
+      <header>
+        <h1>Thoughtful Tutors</h1>
+        <p>We are a group of experienced and highly-qualified academic tutors who offer carefully-tailored, empathetic tutoring that nurtures students’ confidence and brings academic success. Please <a href="mailto:info@thoughtfultutors.co.uk?subject=Tutoring%20enquiry">email us</a> with any enquiries you may have.</p>
+      </header>
+
+      <main>
+        <section>
+          <h2>What makes our tutoring so effective?</h2>
+          <p>At Thoughtful Tutors, we understand that there is no one-size-fits-all approach to academic tutoring. The strength of our expertise lies in our <em>adaptive</em> and <em>responsive</em> tutoring methods that enable us to fulfil the educational needs of the person we are working with.</p>
+        </section>
+
+        <section>
+          <h2>What does adaptive tutoring mean?</h2>
+          <p>When a tutor has the expertise to recognise a student’s starting points in different skill areas, they can adapt their choice of resources, fine-tune the shape of each session and establish high expectations for the individual student. Thoughtful Tutors do not make assumptions about a student’s ‘ability’, instead, we adapt our sessions to the student’s starting points and guide them to be able to value their competencies, develop their skills and feel the rewards of their effort.</p>
+        </section>
+
+        <section>
+          <h2>What does responsive tutoring mean?</h2>
+          <p>Thoughtful Tutors understand that learning is a dynamic process in which our students’ development happens in different ways at different times. Responsive tutoring means modifying our approach in real-time to meet the needs of the student in front of us and maximise their progression. This means that our approach is empathetic, that we are alert to spotting signals from our students and able to respond to their needs by drawing on our extensive reservoir of explanations, strategies and activities.</p>
+        </section>
+
+        <section>
+          <h2>What does it take to be a Thoughtful Tutor?</h2>
+          <p>Being able to adapt and respond to individuals’ progress dynamically is not a skill that develops overnight! All Thoughtful Tutors are DBS-checked qualified teachers with considerable experience of classroom teaching in a range of school settings. Only with this educational experience under our belts are we able to offer truly effective tutoring. Through our professional practice, we have honed our abilities to genuinely see the individual in front of us and gauge what makes them tick so that we can help them to unlock their potential, target their efforts effectively and achieve their academic goals.</p>
+          <p>In addition, all of us have current or recent experience as GCSE or A Level examiners in our subjects, which gives us the precise know-how and expertise to deliver exam success across a range of exam boards and specification options.</p>
+          <p>As Thoughtful Tutors, we meet students where they are and guide them to take the next steps in their learning journey so that they can embark on their path to success.</p>
+        </section>
+
+        <section>
+          <h2>Bringing individuals back to great learning experiences</h2>
+          <p>Creativity and the love of learning lies at the heart of Thoughtful Tutors. We celebrate our students’ small gains as well as their breakthrough moments and nurture a growth mindset at all times.</p>
+          <p>We have a wide range of positive SEND strategies in our teaching toolkits to ensure that all students can grow academically in a supported environment. We are skilled in using assistive technology to aid students’ progress.</p>
+          <p>All Thoughtful Tutors are trauma-informed educators, who ensure we provide a context of safety and trust for all individuals to enable them to unlock their academic potential and thrive.</p>
+        </section>
+
+        <section>
+          <h2>What we can do for you</h2>
+          <p>Thoughtful Tutors offers a wealth of high-quality adaptive and responsive tutoring for students aged 11–18.</p>
+          <h3>Ages 11–13</h3>
+          <ul>
+            <li>Support with school work or homework</li>
+            <li>Subject-specific skills development</li>
+            <li>For students who may have been out of school for a time we can provide a carefully planned course of study to enable them to progress</li>
+          </ul>
+          <h3>GCSEs</h3>
+          <ul>
+            <li>Subject-specific skills development</li>
+            <li>Exam technique and help with revision</li>
+            <li>Help with specific topics and assessments</li>
+          </ul>
+          <h3>A Level</h3>
+          <ul>
+            <li>Help with essay-writing skills and with planning and organising extended pieces of work</li>
+            <li>Exam technique and revision strategies</li>
+            <li>Help with specific topics and subject skills</li>
+            <li>University preparation and UCAS advice</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Our areas of academic expertise</h2>
+          <p>We currently have highly-qualified tutors in English, Maths, Science and the Humanities, available for daytime, after-school or school holiday sessions. Whether we are tutoring individuals in person or online, our adaptive and responsive approach remains constant.</p>
+        </section>
+
+        <section class="are">
+          <h2>Thoughtful Tutors are …</h2>
+          <ul>
+            <li>creative</li>
+            <li>adaptive</li>
+            <li>responsive</li>
+            <li>patient</li>
+            <li>understanding</li>
+            <li>empathetic</li>
+            <li>experienced</li>
+            <li>positive</li>
+          </ul>
+        </section>
+      </main>
+
+      <footer>
+        <p>Enquiries: <a href="mailto:info@thoughtfultutors.co.uk?subject=Tutoring%20enquiry">info@thoughtfultutors.co.uk</a></p>
+      </footer>
+    </div>
   </body>
 </html>

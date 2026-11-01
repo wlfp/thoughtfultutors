@@ -1,2 +1,2 @@
-site/min/*
 .DS_store
+.wrangler/

@@ -3,36 +3,39 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thoughtful Tutors</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Developer information · Thoughtful Tutors</title>
+    <meta name="color-scheme" content="light dark">
+    <link rel="icon" href="data:,">
+    <style>
+      :root { --paper: #fdfcfa; --ink: #2e2a27; --link: #0b6a3a; }
+      @media (prefers-color-scheme: dark) { :root { --paper: #1c1b1a; --ink: #e6e1dc; --link: #7fd3a0; } }
+      html { font-size: clamp(18px, 15px + 0.45vw, 21px); }
+      body { margin: 0; padding: 3rem max(1.25rem, 5vw); background: var(--paper); color: var(--ink); font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif; line-height: 1.4; }
+      main { max-width: 32rem; margin-inline: auto; }
+      h1 { font-size: 1.6em; line-height: 1.2; margin: 0 0 0.8em; }
+      a { color: var(--link); text-underline-offset: 0.18em; }
+    </style>
   </head>
   <body>
-    <H1>Thoughtful Tutors Developer Information</H1>
-    <p>
-      The domain was registered with
-      <a href="https://www.cloudflare.com/en-gb/products/registrar/">Cloudflare</a>
-      (as they provide at-cost domain registration) who also provide the authoritative DNS.
-      The mail service is provided by
-      <a href="https://support.apple.com/en-gb/102540">iCloud's custom email domain service</a>
-      as it's a good-value option (for those with an existing iCloud+ subscription) and even
-      <a href="mailto:dev@thoughtfultutors.co.uk">actually works</a>!
-      This page (yes, the one you're looking at right now) is hosted in an
-      <a href="https://aws.amazon.com/s3/">S3</a>
-      bucket with a
-      <a href="https://aws.amazon.com/cloudfront/">Cloudfront</a>
-      layer infront.
-      Cloudfront is mostly useful here for so that HTTPS is supported, the edge caching and gzip'ing are bonuses. 
-      As much of the infrastructure provisioning as possible lives in an
-      <a href="https://opentofu.org/">OpenTofu</a>
-      file so that I can easily change it once Thoughtful Tutors scales to a
-      <i>ga-trillion</i>
-      users.
-      There is a CD pipeline in place that minifies the site content using
-      <a href="https://github.com/tdewolff/minify/tree/master">minify</a>,
-      then pushes the optimised files to the S3 bucket before invalidating the Cloudfront cache.
-      However, you already know all of this (thanks to a few
-      <code>dig</code>
-      lookups and your powers of deduction), don't you?
-    </p>
+    <main>
+      <h1>Thoughtful Tutors developer information</h1>
+      <p>
+        The domain was registered with
+        <a href="https://www.cloudflare.com/en-gb/products/registrar/">Cloudflare</a>
+        (as they provide at-cost domain registration) who also provide the authoritative DNS.
+        The mail service is provided by
+        <a href="https://support.apple.com/en-gb/102540">iCloud’s custom email domain service</a>
+        as it’s a good-value option (for those with an existing iCloud+ subscription) and even
+        <a href="mailto:dev@thoughtfultutors.co.uk">actually works</a>!
+        This page (yes, the one you’re looking at right now) is served by
+        <a href="https://developers.cloudflare.com/workers/static-assets/">Cloudflare Workers static assets</a>,
+        so domain, DNS, HTTPS and hosting all live in one place.
+        The whole site is three hand-written HTML files with their styles inline and no web fonts to download,
+        which keeps it small enough that minifying it would save almost nothing.
+        However, you already know all of this (thanks to a few
+        <code>dig</code>
+        lookups and your powers of deduction), don’t you?
+      </p>
+    </main>
   </body>
 </html>
